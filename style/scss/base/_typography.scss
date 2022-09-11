@@ -1,1 +1,47 @@
-@use './fonts';
+@use './fonts' as f;
+@use './colors' as c;
+@use '../abstracts/mixins' as m;
+
+
+body{
+    font-family: 'TTNorms', sans-serif;
+}
+
+
+h1{
+   @include m.text(38px, 500, 45px, c.$white); 
+}
+h2.title{
+    @include m.text(42px, bold, 50px, c.$accent-red);
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.red-title{
+    @include m.text(42px, bold, 50px, transparent);
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.experience{
+    h2.experience-link.active{
+    @include m.text(42px, bold, 50px, c.$accent-red);
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+h2.experience-link{
+    @include m.text(42px, bold, 50px, c.$text-grey);
+    text-align: right;
+}
+}
+
+h3{
+    @include m.text(32px, 500, 38px, c.$white);
+}
+.experience-text{
+    @include m.text(21px, 400, 30px, c.$white);
+}

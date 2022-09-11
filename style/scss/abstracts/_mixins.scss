@@ -4,3 +4,9 @@
     background: -o-linear-gradient($direction, $list);
     background: linear-gradient($direction, $list);  
   }
+  @mixin text($fz, $fw, $lh, $color) {
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $color;
+}

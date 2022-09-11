@@ -1,0 +1,151 @@
+@use '../base/colors' as c;
+@use '../abstracts/mixins' as m;
+
+.header{
+    &-home{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        @include m.gradient(to right top, c.$gradient-soft);
+        .menu__btn{
+            &-row{
+                background-color: c.$white !important;
+            }
+            
+        }
+    }
+    &__bottom{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('../../../assets/images/Symbol-Long-leg.png') center no-repeat, url('../../../assets/images/splash-bcg.png') center 85% no-repeat;
+            height: 83vh;
+            position: relative;
+            &__arrow{
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+            }
+        }
+
+}
+@media (max-width: 767px){
+    .header__bottom{
+        height: 80vh;
+        background: url('../../../assets/images/Symbol-Long-leg.png') center left 35% no-repeat;
+    }
+}
+
+.experience{
+    background-color: c.$main;
+    padding: 40px 0;
+    margin-top: -1px;
+    .nav-tabs{
+        border-bottom: none;
+    }
+    &-link{
+        margin-bottom: 0;
+        padding-right: 40px;
+        border-right: 3px solid c.$white;
+        &.active{
+            border-right: 3px solid c.$accent-red;
+        }
+    }
+    .tab-content{
+        padding-left: 40px;
+        .experience-text{
+            margin-top: 20px;
+        }
+    }
+    #carouselExperience{
+        display: none;
+        .carousel-indicators{
+            bottom: -40px;
+            margin-top: 20px;
+             button {
+            width: 16px;
+            height: 16;
+            border-radius: 50%;
+            background-color: c.$accent-active-active;
+            opacity: 0.2;
+            &.active{
+                opacity: 1;
+            }   
+        }
+        }
+        .carousel-title{
+            text-transform: uppercase;
+            @include m.text(14px, bold, 16px, transparent);
+            background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        h3{
+            @include m.text(22px, 500, 26px, c.$white);
+        }
+        .experience-text{
+            @include m.text(18px, 400, 26px, c.$white);
+        }
+    }
+}
+@media (max-width: 992px){
+    .experience__tabs{
+        display: none !important;
+    }
+    .experience{
+        #carouselExperience{
+        display: block;
+    }
+    }  
+}
+
+.services{
+    .heading-link{
+        color: c.$text-grey;
+    }
+}
+.heading-link{
+    @include m.text(14px, 500, 17px, c.$accent-active-active);
+        text-transform: uppercase;
+        position: relative;
+        &::after{
+            content: '>';
+            position: absolute;
+            right: -10px;
+            top: -10%;
+        }
+}
+.team{
+    margin-top: 40px;
+}
+#carouselTeam{
+    background-color: c.$bg-grey;
+    border-radius: 12px;
+    padding-right: 50px;
+    .carousel-indicators{
+        bottom: -60px;
+    button{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: c.$accent-active-active;
+        opacity: 0.2;
+        &.active{
+            opacity: 1;
+        }
+        }
+    }
+    .carousel-item{
+        display: flex;
+        column-gap: 40px;
+    }
+    .team-info{
+        margin-top: 40px;
+    }
+    .team-caption{
+        .team-img-circle{
+            
+        }
+    }
+}

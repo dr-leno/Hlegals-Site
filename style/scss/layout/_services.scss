@@ -1,0 +1,79 @@
+@use "../base/colors" as c;
+@use "../abstracts/mixins" as m;
+
+.services{ 
+    @include m.gradient(to bottom left, c.$gradient-supersoft);
+    margin-top: -1px;
+    padding: 80px 0;
+    border-radius: 0px 0px 12px 12px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        height: 10px;
+        bottom: -10px;
+        right: 20px;
+        left: 20px;
+        border-radius: 0px 0px 12px 12px;
+        background-color: #CACADB;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        height: 10px;
+        bottom: -20px;
+        right: 40px;
+        left: 40px;
+        border-radius: 0px 0px 12px 12px;
+        background-color: #E7E7F2;
+    }
+    .heading-link{
+        @include m.text(14px, 500, 17px, c.$text-grey);
+        text-transform: uppercase;
+    }
+    &__cards-wrap{
+        display: flex;
+        row-gap: 60px;
+        column-gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 68px;
+    }
+    &__card{
+        width: calc(33% - 40px);
+        &-img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 92px;
+            height: 92px;
+            border-radius: 24px;
+            background-color: c.$white;
+        }
+        &-title{
+            @include m.text(24px, 500, 28px, c.$accent-active-active);
+            margin-top: 20px;
+        }
+        &-text{
+            @include m.text(18px, 400, 26px, c.$white);
+            margin-top: 15px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .services{
+        padding: 45px 0;
+        &__cards-wrap{
+            flex-direction: column;
+        }
+        &__card{
+            width: 100%;
+            &-inner-wrap{
+                display: flex;
+                column-gap: 10px;
+            }
+        }
+    }
+}
+   
