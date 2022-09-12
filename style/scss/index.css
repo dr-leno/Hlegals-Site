@@ -106,6 +106,19 @@ h3 {
   color: #fff;
 }
 
+.team-caption-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #B3B3BA;
+}
+.team-job-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+
 .header-home {
   display: flex;
   flex-direction: column;
@@ -254,6 +267,26 @@ h3 {
 }
 #carouselTeam .team-info {
   margin-top: 40px;
+}
+#carouselTeam .team-caption {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+#carouselTeam .team-caption .team-img-circle {
+  display: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+  .team-image {
+    display: none;
+  }
+  #carouselTeam .team-caption .team-img-circle {
+    display: block;
+  }
 }
 .header__top {
   padding-top: 50px;

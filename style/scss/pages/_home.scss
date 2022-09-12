@@ -144,8 +144,25 @@
         margin-top: 40px;
     }
     .team-caption{
+        display: flex;
+        column-gap: 10px;
         .team-img-circle{
-            
+            display: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    }
+}
+@media (max-width: 992px){
+    .team-image{
+        display: none;
+    }
+    #carouselTeam{
+        .team-caption{
+            .team-img-circle{
+                display: block;
+            }
         }
     }
 }
