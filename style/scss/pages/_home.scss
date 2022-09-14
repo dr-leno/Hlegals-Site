@@ -19,7 +19,7 @@
             align-items: center;
             justify-content: center;
             background: url('../../../assets/images/Symbol-Long-leg.png') center no-repeat, url('../../../assets/images/splash-bcg.png') center 85% no-repeat;
-            height: 83vh;
+            height: 80vh;
             position: relative;
             &__arrow{
                 position: absolute;
@@ -106,7 +106,7 @@
     }
 }
 .heading-link{
-    @include m.text(14px, 500, 17px, c.$accent-active-active);
+    @include m.text(14px, bold, 17px, c.$accent-active-active);
         text-transform: uppercase;
         position: relative;
         &::after{
@@ -159,6 +159,7 @@
         display: none;
     }
     #carouselTeam{
+        padding: 0 20px;
         .team-caption{
             .team-img-circle{
                 display: block;
