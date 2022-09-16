@@ -652,7 +652,7 @@ h3 {
   align-items: center;
 }
 .header__top .header__logo-breadcrumbs {
-  margin-left: 25px;
+  margin-left: 15px;
   position: relative;
 }
 .header__top .header__logo-breadcrumbs.on-light {
@@ -668,17 +668,15 @@ h3 {
   width: 21px;
   height: 47px;
   top: -10%;
-  left: -15%;
+  left: -10%;
   background-image: url("../../../assets/icons/slash.svg");
 }
 .header__top .header__logo-breadcrumbs::after {
   position: absolute;
-  z-index: 10;
   content: "";
   width: 42px;
   height: 47px;
   top: -10%;
-  left: 102%;
   background-image: url("../../../assets/icons/symbol-slash.svg");
 }
 .header__top .header__info {
@@ -787,12 +785,24 @@ h3 {
     grid-template-areas: "info info" "logo navigation";
     gap: 10px;
   }
+  .header__top .header__logo-img {
+    width: 77px;
+  }
+  .header__top .header__logo img {
+    width: 100%;
+  }
+  .header__top .header__logo-breadcrumbs {
+    margin-left: 10px;
+  }
   .header__top .header__logo-breadcrumbs::before {
-    top: -65%;
-    left: -35%;
+    width: 11px;
+    height: 24px;
+    top: -25%;
+    left: -10%;
+    background: url("../../../assets/icons/slash-small.svg") no-repeat;
   }
   .header__top .header__logo-breadcrumbs::after {
-    top: -65%;
+    background: url("../../../assets/icons/symbol-slash-small.svg") no-repeat;
   }
   .header__top .header__logo-breadcrumbs.on-light {
     font-size: 19px;
