@@ -175,3 +175,23 @@ h3{
         }
     }
 }
+// TEAM-MEMBER
+.team-representative{
+    &-contacts{
+        p{
+            @include m.text(16px, 400, 22px, c.$text-grey);
+        }
+        a{
+            @include m.text(16px, 400, 19px, c.$accent-active);
+        }
+    }
+    &-description{
+        p{
+            @include m.text(18px, 400, 26px, #000);
+        }
+        h3{
+            @include m.text(14px, bold, 17px, c.$main);
+            text-transform: uppercase;
+        }
+    }
+}
