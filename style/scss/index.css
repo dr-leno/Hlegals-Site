@@ -6,6 +6,10 @@
   text-decoration: none !important;
 }
 
+.container {
+  max-width: 1320px;
+}
+
 @media (max-width: 992px) {
   .container {
     max-width: 750px;
@@ -43,6 +47,10 @@
 }
 body {
   font-family: "TTNorms", sans-serif;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 h1 {
@@ -141,6 +149,64 @@ h3 {
   text-align: center;
 }
 
+.publications .publication-item-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #006CCF;
+}
+.publications .publication-item-date {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #B3B3BA;
+}
+.publications .publication-item-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #000;
+}
+.publications-button {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-adress-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #323264;
+}
+.footer-adress-map {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+  color: #24A3FF;
+  text-transform: uppercase;
+}
+.footer-contacts-tel {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  color: #46466E;
+}
+.footer-contacts-mail {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  color: #24A3FF;
+}
+.footer-copyright-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #B3B3BA;
+}
+
 .header-home {
   display: flex;
   flex-direction: column;
@@ -196,7 +262,7 @@ h3 {
   display: none;
 }
 .experience #carouselExperience .carousel-indicators {
-  bottom: -40px;
+  bottom: -50px;
   margin-top: 20px;
 }
 .experience #carouselExperience .carousel-indicators button {
@@ -313,6 +379,39 @@ h3 {
     display: block;
   }
 }
+.footer {
+  background-color: #F5F5FA;
+}
+.footer-content-wrap {
+  padding: 35px 0 50px;
+  border-top: 4px solid #E6E6F0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-adress {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.footer-adress-map {
+  margin-right: 47px;
+  position: relative;
+}
+.footer-adress-map::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 25%;
+  left: -10%;
+  background-color: #B3B3BA;
+  border-radius: 50%;
+}
+.footer-contacts {
+  margin-top: 30px;
+}
+
 .header__top {
   padding-top: 50px;
   display: grid;
@@ -651,5 +750,96 @@ h3 {
   }
   .clients-link img {
     width: 158px;
+  }
+}
+.publications {
+  margin-top: -15px;
+  background-color: #F5F5FA;
+  padding: 40px 0;
+  height: 720px;
+  overflow: hidden;
+  position: relative;
+}
+.publications::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+}
+.publications-wrap {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.publications-column {
+  display: flex;
+  flex-direction: column;
+}
+.publications .publication-item {
+  margin-bottom: 40px;
+}
+.publications .publication-item-image img {
+  display: block;
+  width: 100%;
+  border: 8px 8px 0 0;
+}
+.publications .publication-item-content {
+  background-color: #fff;
+  padding: 20px;
+}
+.publications .publication-item-text {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 4px solid #E6E6F0;
+}
+.publications-action {
+  position: absolute;
+  height: 50px;
+  z-index: 1;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+.publications-button {
+  display: block;
+  width: 250px;
+  padding: 16px;
+  border: 1px solid #24A3FF;
+  border-radius: 12px;
+  background-color: #24A3FF;
+  box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+}
+
+@media (max-width: 767px) {
+  .publications {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: visible;
+  }
+  .publications::after {
+    display: none;
+  }
+  .publications-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .publications .publication-item {
+    margin-bottom: 20px;
+  }
+  .publications .publication-item.s-none {
+    display: none;
+  }
+  .publications .publication-item-text {
+    display: none;
+  }
+  .publications-action {
+    bottom: 0;
   }
 }/*# sourceMappingURL=index.css.map */

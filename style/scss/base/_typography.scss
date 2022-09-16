@@ -7,7 +7,9 @@ body{
     font-family: 'TTNorms', sans-serif;
 }
 
-
+p{
+    margin-bottom: 0;
+}
 h1{
    @include m.text(38px, 500, 45px, c.$white); 
 }
@@ -69,5 +71,44 @@ h3{
         @include m.text(14px, bold, 17px, c.$main);
         text-transform: uppercase;
         text-align: center;
+    }
+}
+.publications{
+    .publication-item{
+        &-title{
+            @include m.text(18px, 500, 21px, c.$accent-active-active);
+        }
+        &-date{
+            @include m.text(12px, bold, 14px, c.$text-grey);
+        }
+        &-text{
+            @include m.text(16px, 400, 22px, #000);
+        }
+    }
+    &-button{
+        @include m.text(16px, bold, 22px, c.$white);
+        text-align: center;
+    }
+}
+.footer{
+    &-adress{
+        &-text{
+            @include m.text(16px, 400, 19px, c.$main);
+        }
+        &-map{
+            @include m.text(12px, bold, 14px, c.$accent-active);
+            text-transform: uppercase;
+        }
+    }
+    &-contacts{
+        &-tel{
+            @include m.text(16px, bold, 16px, c.$main-alt);
+        }
+        &-mail{
+            @include m.text(16px, bold, 19px, c.$accent-active);
+        }
+    }
+    &-copyright-link{
+        @include m.text(16px, 400, 19px, c.$text-grey);
     }
 }

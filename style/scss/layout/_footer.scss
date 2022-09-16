@@ -1,0 +1,36 @@
+@use '../base/colors' as c;
+@use '../abstracts/mixins' as m;
+
+.footer{
+    background-color: c.$bg-grey;
+    
+    &-content-wrap{
+        padding: 35px 0 50px;
+        border-top: 4px solid c.$separator-grey;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-adress{
+        display: flex;
+        align-items: center;
+        column-gap: 50px;
+        &-map{
+            margin-right: 47px;
+            position: relative;
+        &::before{
+            content: "";
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            top: 25%;
+            left: -10%;
+            background-color: c.$text-grey;
+            border-radius: 50%;
+        }
+        }  
+    }
+    &-contacts{
+        margin-top: 30px;
+    }
+}
+    
