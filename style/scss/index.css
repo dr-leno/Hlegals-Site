@@ -409,9 +409,65 @@ h3 {
   border-radius: 50%;
 }
 .footer-contacts {
+  display: flex;
+  align-items: center;
   margin-top: 30px;
 }
+.footer-contacts-tel {
+  margin-left: 20px;
+  margin-right: 30px;
+  position: relative;
+}
+.footer-contacts-tel::before, .footer-contacts-tel::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 25%;
+  left: -7%;
+  background-color: #B3B3BA;
+  border-radius: 50%;
+}
+.footer-contacts-tel::after {
+  left: 107%;
+}
 
+@media (max-width: 992px) {
+  .footer-content-wrap {
+    padding: 35px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-copyright {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 40px;
+  }
+  .footer-adress, .footer-contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-adress-map, .footer-contacts-map {
+    margin: 0;
+  }
+  .footer-adress-map::before, .footer-contacts-map::before {
+    display: none;
+  }
+  .footer-contacts {
+    margin-top: 15px;
+  }
+  .footer-contacts-tel::before, .footer-contacts-tel::after {
+    display: none;
+  }
+}
 .header__top {
   padding-top: 50px;
   display: grid;
@@ -756,7 +812,7 @@ h3 {
   margin-top: -15px;
   background-color: #F5F5FA;
   padding: 40px 0;
-  height: 720px;
+  height: 750px;
   overflow: hidden;
   position: relative;
 }
@@ -809,7 +865,7 @@ h3 {
 .publications-button {
   display: block;
   width: 250px;
-  padding: 16px;
+  padding: 12px;
   border: 1px solid #24A3FF;
   border-radius: 12px;
   background-color: #24A3FF;

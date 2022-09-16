@@ -5,7 +5,7 @@
     margin-top: -15px;
     background-color: c.$bg-grey;
     padding: 40px 0;
-    height: 720px;
+    height: 750px;
     overflow: hidden;
     position: relative;
     &::after{
@@ -60,7 +60,7 @@
     &-button{
         display: block;
         width: 250px;
-        padding: 16px;
+        padding: 12px;
         border: 1px solid c.$accent-active;
         border-radius: 12px;
         background-color: c.$accent-active;
