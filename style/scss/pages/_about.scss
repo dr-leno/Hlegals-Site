@@ -1,0 +1,141 @@
+@use '../base/colors' as c;
+@use '../abstracts/mixins' as m;
+
+.introduction{
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 75%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 50px;
+    &-description{
+        width: 58%;
+    }
+    &-text{
+        margin-top: 20px;
+    }
+    &-advantages{
+        padding-left: 20px;
+        border-left: 4px solid c.$separator-grey;
+    }
+    &-advantages-item-title{
+        display: flex;
+    }
+}
+.about-team-picture{
+    margin-top: 100px;
+    img{
+        width: 100%;
+    }
+    
+}
+@media (max-width: 992px){
+    .introduction{
+        margin-top: 20px;
+        align-items: center;
+        padding: 0 50px;
+        width: 90%;
+        &-description{
+            width: 70%;
+        }
+    }
+}
+@media (max-width: 767px){
+    .introduction{
+        flex-direction: column;
+        padding: 0 20px;
+        width: 100%;
+        &-description{
+            width: 100%;
+        }
+        &-advantages{
+            margin-top: 20px;
+            padding-top: 20px;
+            padding-left: 0;
+            border-top: 4px solid c.$separator-grey;
+            border-left: none;
+        }
+    }
+    .about-team-picture{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        overflow: hidden;
+        img{
+            width: 953px;
+        }
+        
+    }
+}
+
+.quality{
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 75%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 50px;
+    &-text{
+        p{
+            margin-top: 15px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .quality{
+        margin-top: 20px;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 0 20px;
+        width: 100%;
+    }
+}
+
+.achievements{
+    background-color: c.$bg-grey;
+    padding: 30px 0 50px;
+    #carouselAchievements{
+        .carousel-item{
+            display: flex;
+            justify-content: space-between;
+        }
+        .carousel-indicators{
+            bottom: -50px;
+        }
+    }
+}
+@media (max-width: 992px){
+    .achievements{
+        #carouselAchievements{
+            .carousel-item{
+                justify-content: center;
+                column-gap: 50px;
+                img{
+                    &:nth-child(3){
+                        display: none;
+                    }
+                    &:nth-child(4){
+                        display: none;
+                    }
+                }
+            } 
+            .carousel-indicators{
+                bottom: -60px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .achievements{
+        #carouselAchievements{
+            .carousel-item{
+                padding: 0 60px;
+                column-gap: 10px;
+                justify-content: space-between;
+            }
+        }
+    }
+}

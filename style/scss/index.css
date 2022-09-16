@@ -18,7 +18,7 @@
 @media (max-width: 767px) {
   .container {
     max-width: none;
-    padding: 0 30px;
+    padding: 0 20px;
   }
 }
 @font-face {
@@ -82,6 +82,14 @@ h2.title {
   background-clip: text;
 }
 
+@media (max-width: 767px) {
+  .red-title {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 38px;
+    color: transparent;
+  }
+}
 .experience h2.experience-link.active {
   font-size: 42px;
   font-weight: bold;
@@ -207,6 +215,62 @@ h3 {
   color: #B3B3BA;
 }
 
+.introduction-text {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000;
+}
+.introduction-advantages-item-text p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #323264;
+}
+
+@media (max-width: 767px) {
+  .introduction-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #000;
+  }
+}
+.quality-text p {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #000;
+}
+
+@media (max-width: 767px) {
+  .quality-text p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #000;
+  }
+}
+.achievements-title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  color: #323264;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#carouselTeam .carousel-indicators button, #carouselExperience .carousel-indicators button, #carouselAchievements .carousel-indicators button {
+  width: 16px;
+  height: 16;
+  border-radius: 50%;
+  background-color: #006CCF;
+  opacity: 0.2;
+}
+#carouselTeam .carousel-indicators button.active, #carouselExperience .carousel-indicators button.active, #carouselAchievements .carousel-indicators button.active {
+  opacity: 1;
+}
+
 .header-home {
   display: flex;
   flex-direction: column;
@@ -264,16 +328,6 @@ h3 {
 .experience #carouselExperience .carousel-indicators {
   bottom: -50px;
   margin-top: 20px;
-}
-.experience #carouselExperience .carousel-indicators button {
-  width: 16px;
-  height: 16;
-  border-radius: 50%;
-  background-color: #006CCF;
-  opacity: 0.2;
-}
-.experience #carouselExperience .carousel-indicators button.active {
-  opacity: 1;
 }
 .experience #carouselExperience .carousel-title {
   text-transform: uppercase;
@@ -338,16 +392,6 @@ h3 {
 #carouselTeam .carousel-indicators {
   bottom: -60px;
 }
-#carouselTeam .carousel-indicators button {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #006CCF;
-  opacity: 0.2;
-}
-#carouselTeam .carousel-indicators button.active {
-  opacity: 1;
-}
 #carouselTeam .carousel-item {
   display: flex;
   -moz-column-gap: 40px;
@@ -377,6 +421,134 @@ h3 {
   }
   #carouselTeam .team-caption .team-img-circle {
     display: block;
+  }
+}
+.introduction {
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 75%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.introduction-description {
+  width: 58%;
+}
+.introduction-text {
+  margin-top: 20px;
+}
+.introduction-advantages {
+  padding-left: 20px;
+  border-left: 4px solid #E6E6F0;
+}
+.introduction-advantages-item-title {
+  display: flex;
+}
+
+.about-team-picture {
+  margin-top: 100px;
+}
+.about-team-picture img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .introduction {
+    margin-top: 20px;
+    align-items: center;
+    padding: 0 50px;
+    width: 90%;
+  }
+  .introduction-description {
+    width: 70%;
+  }
+}
+@media (max-width: 767px) {
+  .introduction {
+    flex-direction: column;
+    padding: 0 20px;
+    width: 100%;
+  }
+  .introduction-description {
+    width: 100%;
+  }
+  .introduction-advantages {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-left: 0;
+    border-top: 4px solid #E6E6F0;
+    border-left: none;
+  }
+  .about-team-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    overflow: hidden;
+  }
+  .about-team-picture img {
+    width: 953px;
+  }
+}
+.quality {
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 75%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.quality-text p {
+  margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+  .quality {
+    margin-top: 20px;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+.achievements {
+  background-color: #F5F5FA;
+  padding: 30px 0 50px;
+}
+.achievements #carouselAchievements .carousel-item {
+  display: flex;
+  justify-content: space-between;
+}
+.achievements #carouselAchievements .carousel-indicators {
+  bottom: -50px;
+}
+
+@media (max-width: 992px) {
+  .achievements #carouselAchievements .carousel-item {
+    justify-content: center;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
+  .achievements #carouselAchievements .carousel-item img:nth-child(3) {
+    display: none;
+  }
+  .achievements #carouselAchievements .carousel-item img:nth-child(4) {
+    display: none;
+  }
+  .achievements #carouselAchievements .carousel-indicators {
+    bottom: -60px;
+  }
+}
+@media (max-width: 767px) {
+  .achievements #carouselAchievements .carousel-item {
+    padding: 0 60px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    justify-content: space-between;
   }
 }
 .footer {
@@ -476,6 +648,38 @@ h3 {
 }
 .header__top .header__logo {
   grid-area: logo;
+  display: flex;
+  align-items: center;
+}
+.header__top .header__logo-breadcrumbs {
+  margin-left: 25px;
+  position: relative;
+}
+.header__top .header__logo-breadcrumbs.on-light {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 45px;
+  color: #323264;
+  text-transform: uppercase;
+}
+.header__top .header__logo-breadcrumbs::before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 47px;
+  top: -10%;
+  left: -15%;
+  background-image: url("../../../assets/icons/slash.svg");
+}
+.header__top .header__logo-breadcrumbs::after {
+  position: absolute;
+  z-index: 10;
+  content: "";
+  width: 42px;
+  height: 47px;
+  top: -10%;
+  left: 102%;
+  background-image: url("../../../assets/icons/symbol-slash.svg");
 }
 .header__top .header__info {
   grid-area: info;
@@ -498,6 +702,12 @@ h3 {
   background-color: #F0145A;
   color: #fff;
 }
+.header__top .header__info .header__adress-link {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #B3B3BA;
+}
 .header__top .header__info .header__phone {
   position: relative;
 }
@@ -505,7 +715,7 @@ h3 {
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
-  color: #fff;
+  color: #B3B3BA;
 }
 .header__top .header__info .header__phone::before, .header__top .header__info .header__phone::after {
   content: "";
@@ -541,19 +751,20 @@ h3 {
   font-size: 18px;
   font-weight: 500;
   line-height: 21px;
-  color: #fff;
+  color: #24A3FF;
 }
 .header__menu .navbar-nav.menu .menu-link:hover {
-  color: #F0145A;
+  color: #F0145A !important;
 }
 .header__menu .navbar-nav.menu .menu-link.active {
   color: #F0145A;
   border-bottom: 2px solid #F0145A;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .header__top {
-    grid-template-areas: "info info" "logo navigation";
+    grid-template-areas: "info" "logo" "navigation";
+    gap: 10px;
   }
   .header__info {
     justify-content: space-between !important;
@@ -566,6 +777,28 @@ h3 {
   }
   .header__facebook {
     display: none;
+  }
+  .header .navbar-collapse {
+    justify-content: flex-start !important;
+  }
+}
+@media (max-width: 767px) {
+  .header__top {
+    grid-template-areas: "info info" "logo navigation";
+    gap: 10px;
+  }
+  .header__top .header__logo-breadcrumbs::before {
+    top: -65%;
+    left: -35%;
+  }
+  .header__top .header__logo-breadcrumbs::after {
+    top: -65%;
+  }
+  .header__top .header__logo-breadcrumbs.on-light {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #323264;
   }
 }
 .services {

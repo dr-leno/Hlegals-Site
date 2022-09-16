@@ -1,0 +1,18 @@
+@use '../base/colors' as c;
+@use '../abstracts/mixins' as m;
+
+#carouselTeam, #carouselExperience, #carouselAchievements{
+    .carousel-indicators{
+        button {
+        width: 16px;
+        height: 16;
+        border-radius: 50%;
+        background-color: c.$accent-active-active;
+        opacity: 0.2;
+        &.active{
+            opacity: 1;
+        }   
+    }
+    }
+
+}
