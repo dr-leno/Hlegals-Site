@@ -160,3 +160,18 @@ h3{
         text-align: center;
     }
 }
+// TEAM
+.team-members{
+    .team-member{
+        &-caption{
+            &-text{
+                h4{
+                    @include m.text(18px, bold, 21px, c.$main);
+                }
+                p{
+                    @include m.text(16px, 400, 22px, c.$text-grey);
+                }
+            }
+        }
+    }
+}
