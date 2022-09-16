@@ -27,6 +27,11 @@ h2.title{
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+@media (max-width: 767px){
+    .red-title{
+        @include m.text(32px, bold, 38px, transparent);
+    }
+}
 .experience{
     h2.experience-link.active{
     @include m.text(42px, bold, 50px, c.$accent-red);
@@ -110,5 +115,48 @@ h3{
     }
     &-copyright-link{
         @include m.text(16px, 400, 19px, c.$text-grey);
+    }
+}
+// ABOUT PAGE
+.introduction{
+    &-text{
+        @include m.text(21px, 400, 30px, #000);
+    }
+    &-advantages-item-text{
+        p{
+            @include m.text(18px, 400, 21px, c.$main);
+        }
+        
+    }
+}
+@media (max-width: 767px){
+    .introduction{
+        &-text{
+            @include m.text(18px, 400, 26px, #000);
+        }
+    }
+}
+
+.quality{
+    &-text{
+        p{
+            @include m.text(21px, 400, 30px, #000);
+        }
+    }
+}
+@media (max-width: 767px){
+    .quality{
+        &-text{
+            p{
+                @include m.text(18px, 400, 26px, #000);
+            }
+        }
+    }
+}
+.achievements{
+    &-title{
+        @include m.text(14px, bold, 17px, c.$main);
+        text-transform: uppercase;
+        text-align: center;
     }
 }

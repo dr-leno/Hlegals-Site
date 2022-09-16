@@ -8,6 +8,35 @@
     grid-template-areas: "logo info" "logo navigation";
     .header__logo {
       grid-area: logo;
+      display: flex;
+      align-items: center;
+      &-breadcrumbs{
+        margin-left: 25px;
+        position: relative;
+        &.on-light{
+          @include m.text(38px, 400, 45px, c.$main);
+          text-transform: uppercase;
+        }
+        &::before{
+          position: absolute;
+          content: '';
+          width: 21px;
+          height: 47px;
+          top: -10%;
+          left: -15%;
+          background-image: url('../../../assets/icons/slash.svg');
+        }
+        &::after{
+          position: absolute;
+          z-index: 10;
+          content: '';
+          width: 42px;
+          height: 47px;
+          top: -10%;
+          left: 102%;
+          background-image: url('../../../assets/icons/symbol-slash.svg');
+        }
+      }
     }
     .header__info {
       grid-area: info;
@@ -28,10 +57,15 @@
           }
         }
       }
+      .header__adress{
+        &-link{
+          @include m.text(16px, 400, 19px, c.$text-grey);
+        }
+      }
       .header__phone {
         position: relative;
         a{
-            @include m.text(16px, 700, 19px, c.$white);
+            @include m.text(16px, 700, 19px, c.$text-grey);
         }
         &::before,
         &::after {
@@ -66,9 +100,9 @@
         padding: 0;
         gap: 15px;
       .menu-link {
-        @include m.text(18px, 500, 21px, c.$white);
+        @include m.text(18px, 500, 21px, c.$accent-active);
         &:hover {
-          color: c.$accent-red;
+          color: c.$accent-red !important;
         }
         &.active {
           color: c.$accent-red;
@@ -79,10 +113,11 @@
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 992px){
     .header{
         &__top{
-            grid-template-areas: "info info" "logo navigation";
+            grid-template-areas: "info" "logo" "navigation";
+            gap: 10px;
         }
         &__info{
             justify-content: space-between !important;
@@ -96,7 +131,33 @@
         &__facebook {
             display: none;
         }
+        .navbar-collapse{
+          justify-content: flex-start !important;
+        }
         
     }
+    }
+    @media (max-width: 767px){
+      .header{
+        &__top{
+            grid-template-areas: "info info" "logo navigation";
+            gap: 10px;
+            .header__logo{
+              &-breadcrumbs{
+                &::before{
+                  top: -65%;
+                  left: -35%;
+                }
+                &::after{
+                  top: -65%;
+                }
+                &.on-light{
+                  @include m.text(19px, 400, 22px, c.$main);
+                }
+              }
+            }
+        }
+        
+      }
     }
     
