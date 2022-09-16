@@ -1,0 +1,56 @@
+@use '../base/colors' as c;
+@use '../abstracts/mixins' as m;
+
+.cases{
+    margin-top: 60px;
+    &-wrap {
+        padding: 20px;
+        background-color: c.$bg-grey;
+        &-inner{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+    &-item{
+        padding: 48px 20px 20px;
+        &:nth-child(1){
+            width: 33%;
+        }
+        &:nth-child(2){
+            width: 34%;;
+        }
+        &:nth-child(3){
+            width: 33%;
+        }
+        &:nth-child(4){
+           width: 25%;
+        }
+        &:nth-child(5){
+            width: 34%;
+        }
+        &:nth-child(6){
+            width: 41%;
+        }
+    }
+    .heading-link{
+        @include m.text(14px, bold, 17px, c.$accent-red);
+            text-transform: uppercase;
+            &::after{
+                content: '';
+            }
+        }
+}
+@media (max-width: 992px){
+    .cases{
+        &-wrap{
+            flex-wrap: nowrap;
+        }
+        &-item{
+            &:nth-child(n){
+                width: 100%;
+            }
+    }
+}
+}

@@ -1,1 +1,114 @@
-@use './fonts';
+@use './fonts' as f;
+@use './colors' as c;
+@use '../abstracts/mixins' as m;
+
+
+body{
+    font-family: 'TTNorms', sans-serif;
+}
+
+p{
+    margin-bottom: 0;
+}
+h1{
+   @include m.text(38px, 500, 45px, c.$white); 
+}
+h2.title{
+    @include m.text(42px, bold, 50px, c.$accent-red);
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.red-title{
+    @include m.text(42px, bold, 50px, transparent);
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.experience{
+    h2.experience-link.active{
+    @include m.text(42px, bold, 50px, c.$accent-red);
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+h2.experience-link{
+    @include m.text(42px, bold, 50px, c.$text-grey);
+    text-align: right;
+}
+}
+
+h3{
+    @include m.text(32px, 500, 38px, c.$white);
+}
+.experience-text{
+    @include m.text(21px, 400, 30px, c.$white);
+}
+
+.team{
+    &-caption{
+        &-title{
+            @include m.text(18px, 400, 21px, c.$text-grey);
+        }
+    }
+    &-job-title{
+        @include m.text(16px, 400, 22px, c.$text-grey);
+    }
+}
+.cases{
+    &-item-heading{
+        @include m.text(24px, 500, 28px, c.$main-soft);
+    }
+    &-item-company{
+        @include m.text(18px, 400, 26px, c.$text-grey);
+    }
+}
+.clients{
+    &-title{
+        @include m.text(14px, bold, 17px, c.$main);
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+.publications{
+    .publication-item{
+        &-title{
+            @include m.text(18px, 500, 21px, c.$accent-active-active);
+        }
+        &-date{
+            @include m.text(12px, bold, 14px, c.$text-grey);
+        }
+        &-text{
+            @include m.text(16px, 400, 22px, #000);
+        }
+    }
+    &-button{
+        @include m.text(16px, bold, 22px, c.$white);
+        text-align: center;
+    }
+}
+.footer{
+    &-adress{
+        &-text{
+            @include m.text(16px, 400, 19px, c.$main);
+        }
+        &-map{
+            @include m.text(12px, bold, 14px, c.$accent-active);
+            text-transform: uppercase;
+        }
+    }
+    &-contacts{
+        &-tel{
+            @include m.text(16px, bold, 16px, c.$main-alt);
+        }
+        &-mail{
+            @include m.text(16px, bold, 19px, c.$accent-active);
+        }
+    }
+    &-copyright-link{
+        @include m.text(16px, 400, 19px, c.$text-grey);
+    }
+}

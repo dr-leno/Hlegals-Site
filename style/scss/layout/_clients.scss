@@ -1,0 +1,106 @@
+@use '../base/colors' as c;
+@use '../abstracts/mixins' as m;
+
+.clients{
+    margin-top: 30px;
+    &-list{
+        margin-top: 30px;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item{
+        display: flex;
+        width: 25%;
+        height: 120px;
+        justify-content: center;
+        &.blue{
+            background-color: #1C4280;
+            order: 1;
+        }
+        &.dark-blue{
+            background-color: #143646;
+            order: 2;
+        }
+        &.orange-1{
+            background-color: #F48B30;
+            order: 3;
+        }
+        &.purple{
+            background-color: #9E4DC3;
+            order: 4;
+        }
+        &.orange-2{
+            background-color: #F48B30;
+            order: 5;
+        }
+        &.grey{
+            background-color: #E2E2E4;
+            order: 6;
+        }
+        &.red{
+            background-color: #C71C36;
+            order: 7;
+        }
+        &.light-blue{
+            background-color: #DCF3F9;
+            order: 8;
+        }
+        &.beige{
+            background-color: #EAEAEA;
+            order: 9;
+        }
+        &.violet{
+            background-color: #282240;
+            order: 10;
+        }
+        &.navy-blue{
+            background-color: #1D4568;
+            order: 11;
+        }
+        &.black{
+            background-color: #000;
+            order: 12;
+        }
+    }
+    &-link{
+        align-self: center;
+    }
+}
+@media (max-width: 992px){
+    .clients{
+        &-item{
+            width: 50%;
+            height: 90px;
+            &.orange-2{ 
+                order: 7;
+            }
+            &.grey{
+                order: 12;
+            }
+            &.red{
+                order: 6;
+            }
+            &.light-blue{
+                order: 5;
+            }
+            &.beige{
+                order: 9;
+            }
+            &.violet{
+                order: 11;
+            }
+            &.navy-blue{
+                order: 10;
+            }
+            &.black{
+                order: 9;
+            }
+        }
+        &-link{
+            img{
+                width: 158px;
+            }
+        }
+    }
+}
