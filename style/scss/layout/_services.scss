@@ -2,6 +2,10 @@
 @use "../abstracts/mixins" as m;
 
 .services{ 
+    &.margin-nevative{
+        margin-top: -156px;
+        padding: 230px 0 80px;
+    }
     @include m.gradient(to bottom left, c.$gradient-supersoft);
     margin-top: -1px;
     padding: 80px 0;
@@ -63,6 +67,10 @@
 }
 @media (max-width: 767px){
     .services{
+        &.margin-nevative{
+            margin-top: -140px;
+            padding: 185px 0 45px;
+        }
         padding: 45px 0;
         &__cards-wrap{
             flex-direction: column;

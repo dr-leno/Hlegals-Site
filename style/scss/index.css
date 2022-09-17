@@ -936,6 +936,10 @@ h3 {
     display: none;
   }
 }
+.header {
+  position: relative;
+  z-index: 10;
+}
 .header__top {
   padding-top: 50px;
   display: grid;
@@ -956,6 +960,13 @@ h3 {
   font-weight: 400;
   line-height: 45px;
   color: #323264;
+  text-transform: uppercase;
+}
+.header__top .header__logo-breadcrumbs.on-dark {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 45px;
+  color: #fff;
   text-transform: uppercase;
 }
 .header__top .header__logo-breadcrumbs::before {
@@ -1106,6 +1117,12 @@ h3 {
     line-height: 22px;
     color: #323264;
   }
+  .header__top .header__logo-breadcrumbs.on-dark {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #fff;
+  }
 }
 .services {
   background: linear-gradient(to bottom left, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
@@ -1113,6 +1130,10 @@ h3 {
   padding: 80px 0;
   border-radius: 0px 0px 12px 12px;
   position: relative;
+}
+.services.margin-nevative {
+  margin-top: -156px;
+  padding: 230px 0 80px;
 }
 .services::before {
   content: "";
@@ -1181,6 +1202,10 @@ h3 {
 @media (max-width: 767px) {
   .services {
     padding: 45px 0;
+  }
+  .services.margin-nevative {
+    margin-top: -140px;
+    padding: 185px 0 45px;
   }
   .services__cards-wrap {
     flex-direction: column;
