@@ -12,6 +12,7 @@
 }
     
     .contacts{
+        width: 30%;
         &-info{
             display: flex;
             flex-direction: column;
@@ -43,6 +44,7 @@
             }
         }
         .contacts{
+            width: 90%;
             align-self: flex-start; 
             padding-left: 8%;
             padding-bottom: 20px;

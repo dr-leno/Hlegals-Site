@@ -808,6 +808,9 @@ h3 {
        column-gap: 150px;
 }
 
+.contacts {
+  width: 30%;
+}
 .contacts-info {
   display: flex;
   flex-direction: column;
@@ -838,6 +841,7 @@ h3 {
     flex-direction: column;
   }
   .contacts {
+    width: 90%;
     align-self: flex-start;
     padding-left: 8%;
     padding-bottom: 20px;
