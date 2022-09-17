@@ -1,6 +1,8 @@
 @use "../base/colors" as c;
 @use "../abstracts/mixins" as m;
 .header {
+  position: relative;
+  z-index: 10;
   &__top {
     padding-top: 50px;
     display: grid;
@@ -15,6 +17,10 @@
         position: relative;
         &.on-light{
           @include m.text(38px, 400, 45px, c.$main);
+          text-transform: uppercase;
+        }
+        &.on-dark{
+          @include m.text(38px, 400, 45px, c.$white);
           text-transform: uppercase;
         }
         &::before{
@@ -161,6 +167,9 @@
                 }
                 &.on-light{
                   @include m.text(19px, 400, 22px, c.$main);
+                }
+                &.on-dark{
+                  @include m.text(19px, 400, 22px, c.$white);
                 }
               }
             }
