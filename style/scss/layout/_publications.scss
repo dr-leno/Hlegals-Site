@@ -57,15 +57,7 @@
         display: flex;
         justify-content: center;
     }
-    &-button{
-        display: block;
-        width: 250px;
-        padding: 12px;
-        border: 1px solid c.$accent-active;
-        border-radius: 12px;
-        background-color: c.$accent-active;
-        box-shadow: 0 0 20px rgb(36 163 255 / 50%);
-    }
+    
 }
 
 @media (max-width: 767px){
