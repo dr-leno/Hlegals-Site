@@ -1,0 +1,19 @@
+@use '../base/colors' as c;
+@use '../abstracts/mixins' as m;
+
+.form{
+    background-color: c.$bg-grey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    input, textarea{
+        border-radius: 8px;
+        border: none;
+        padding: 10px;
+    }
+    
+    .action-button{
+        align-self: center;
+    }
+}
