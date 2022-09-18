@@ -1,0 +1,124 @@
+@use '../base/colors' as c;
+@use '../abstracts/mixins' as m;
+
+.service-description{
+    padding: 170px 20px 0;
+    background: url('../../../assets/images/cover-service.png') no-repeat, linear-gradient(27deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    background-size: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-wrap{
+        max-width: 860px;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+    .services__card-img{
+        margin-bottom: 20px;
+    }
+    &-text{
+        p{
+           margin-top: 20px;
+           text-align: center;
+        }
+    }
+    &-action{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 992px){
+    .service-description{
+        padding: 220px 20px 0;
+    }
+}
+@media (max-width: 767px){
+    .service-description{
+        padding: 160px 20px 0;
+        &-wrap{
+            max-width: 860px;
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: center;
+        }
+        &-text{
+        p{
+            text-align: left;
+         }
+        }
+        &-action{
+            align-self: center;
+        }
+    }
+}
+
+.service-direction{
+    padding: 80px 0;
+    margin-top: -1px;
+    background: linear-gradient(190deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        height: 10px;
+        bottom: -10px;
+        right: 20px;
+        left: 20px;
+        border-radius: 0px 0px 12px 12px;
+        background-color: #CACADB;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        z-index: 1;
+        height: 10px;
+        bottom: -20px;
+        right: 40px;
+        left: 40px;
+        border-radius: 0px 0px 12px 12px;
+        background-color: #E7E7F2;
+    }
+    &-wrap{
+        h3{
+            margin-left: 150px;
+        }
+    }
+    &-content{
+        display: flex;
+        justify-content: center;
+        ul li::before {
+            content: "\2022"; 
+            color: c.$accent-red; 
+            font-weight: bold; 
+            display: inline-block; 
+            width: 1em; 
+            margin-left: -1em;
+          }
+          li{
+            margin-bottom: 10px;
+          }
+    }
+    &-item{
+        max-width: 514px;
+    }
+}
+@media (max-width: 992px){
+    .service-direction{
+        &-wrap{
+            h3{
+                margin-left: 0;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .service-direction{
+        &-content{
+           flex-direction: column;
+        }
+    }
+}

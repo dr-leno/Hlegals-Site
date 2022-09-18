@@ -4,34 +4,50 @@
 .cases{
     margin-top: 60px;
     &-wrap {
-        padding: 20px;
-        background-color: c.$bg-grey;
+        
         &-inner{
             margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
+            display: grid;
+            gap: 2px;
+            grid-template-areas:
+            "item1 item1 item3 item3 item4"
+            "item2 item2 item3 item3 item4"
+            "item5 item6 item6 item7 item7";
+            grid-template-columns: 1.5fr 0.3fr 1.6fr 0.5fr 2fr;
+            grid-template-rows: 0.3fr 1fr 1fr;
         }
     }
     &-item{
-        padding: 48px 20px 20px;
+        background-color: c.$bg-grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+        row-gap: 20px;
         &:nth-child(1){
-            width: 33%;
+            grid-area: item1;
+            border-radius: 12px 0px 0px 0px;
         }
         &:nth-child(2){
-            width: 34%;;
+            grid-area: item2;
         }
         &:nth-child(3){
-            width: 33%;
+            grid-area: item3;
         }
         &:nth-child(4){
-           width: 25%;
+            grid-area: item4;
+            border-radius: 0px 12px 0px 0px;
         }
         &:nth-child(5){
-            width: 34%;
+            grid-area: item5;
+            border-radius: 0px 0px 0px 12px;
         }
         &:nth-child(6){
-            width: 41%;
+            grid-area: item6;
+        }
+        &:nth-child(7){
+            grid-area: item7;
+            border-radius: 0px 0px 12px 0px;
         }
     }
     .heading-link{
@@ -45,12 +61,59 @@
 @media (max-width: 992px){
     .cases{
         &-wrap{
-            flex-wrap: nowrap;
+            &-inner{
+                grid-template-areas:
+                "item1 item1"
+                "item2 item3"
+                "item4 item5"
+                "item6 item7";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 0.5fr 1fr 1fr 1fr;
+            }
         }
         &-item{
-            &:nth-child(n){
-                width: 100%;
+            &:nth-child(1){
+                border-radius: 12px 12px 0px 0px;
             }
+            &:nth-child(4){
+                border-radius: 0px;
+            }
+            &:nth-child(5){
+                border-radius: 0px;
+            }
+            &:nth-child(6){
+                border-radius: 0px 0px 0px 12px;
+            }
+            &:nth-child(7){
+                border-radius: 0px 0px 12px 0px;
+            }
+        }
     }
 }
+
+@media (max-width: 767px){
+    .cases{
+        &-wrap{
+            &-inner{
+            grid-template-areas:
+                "item1"
+                "item2"
+                "item3"
+                "item4"
+                "item5"
+                "item6"
+                "item7";
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            }
+        }
+        &-item{
+            &:nth-child(6){
+                border-radius: 0px;
+            }
+            &:nth-child(7){
+                border-radius: 0px 0px 12px 12px;
+            }
+        }
+    }
 }

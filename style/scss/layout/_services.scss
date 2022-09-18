@@ -2,9 +2,8 @@
 @use "../abstracts/mixins" as m;
 
 .services{ 
-    &.margin-nevative{
-        margin-top: -156px;
-        padding: 230px 0 80px;
+    &-page{
+        padding: 220px 0 80px;
     }
     @include m.gradient(to bottom left, c.$gradient-supersoft);
     margin-top: -1px;
@@ -67,6 +66,9 @@
 }
 @media (max-width: 767px){
     .services{
+        &-page{
+            padding: 140px 0 80px;
+        }
         &.margin-nevative{
             margin-top: -140px;
             padding: 185px 0 45px;

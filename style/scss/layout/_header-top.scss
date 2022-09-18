@@ -1,13 +1,22 @@
 @use "../base/colors" as c;
 @use "../abstracts/mixins" as m;
+.is_scrolled .header.on-dark{
+  background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+}
+.is_scrolled .header.on-light{
+  background: c.$white;
+}
 .header {
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   &__top {
     padding-top: 50px;
     display: grid;
     gap: 20px;
     grid-template-areas: "logo info" "logo navigation";
+    grid-template-columns: auto 1fr;
     .header__logo {
       grid-area: logo;
       display: flex;
@@ -121,7 +130,7 @@
     .header{
         &__top{
             grid-template-areas: "info" "logo" "navigation";
-            gap: 10px;
+            grid-template-columns: auto;
         }
         &__info{
             justify-content: space-between !important;

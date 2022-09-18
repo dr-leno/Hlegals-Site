@@ -1,24 +1,15 @@
 @use '../base/colors' as c;
 @use '../abstracts/mixins' as m;
 
-.header{
-    &-home{
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        @include m.gradient(to right top, c.$gradient-soft);
-        .menu__btn{
-            &-row{
-                background-color: c.$white !important;
-            }
-        }
-    }
-    &__bottom{
+.hero{
+    @include m.gradient(to right top, c.$gradient-soft);
+    
+    &-content{
+        height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             background: url('../../../assets/images/Symbol-Long-leg.png') center no-repeat, url('../../../assets/images/splash-bcg.png') center 85% no-repeat;
-            height: 80vh;
             position: relative;
             &__arrow{
                 position: absolute;
@@ -29,15 +20,14 @@
 
 }
 @media (max-width: 767px){
-    .header__bottom{
-        height: 80vh;
+    .hero-content{
         background: url('../../../assets/images/Symbol-Long-leg.png') center left 35% no-repeat;
     }
 }
 
 .experience{
     background-color: c.$main;
-    padding: 40px 0;
+    padding: 160px 0 40px;
     margin-top: -1px;
     .nav-tabs{
         border-bottom: none;
@@ -83,9 +73,15 @@
         display: none !important;
     }
     .experience{
+        padding: 240px 0 40px;
         #carouselExperience{
         display: block;
     }
+    }  
+}
+@media (max-width: 767px){
+    .experience{
+        padding: 200px 0 40px;
     }  
 }
 

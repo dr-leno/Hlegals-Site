@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as m;
 
 .team-members{
-    padding-top: 80px;
+    padding-top: 200px;
     .red-title{
         max-width: 865px;
         margin: 0 auto;
@@ -39,7 +39,7 @@
 }
 @media (max-width: 992px){
     .team-members{
-        padding-top: 20px;
+        padding-top: 220px;
         &-wrapper{
             
            margin-top: 0;
@@ -80,5 +80,10 @@
                 row-gap: 10px;
             }
         }
+    }
+}
+@media (max-width: 767px){
+    .team-members{
+        padding-top: 150px;
     }
 }
