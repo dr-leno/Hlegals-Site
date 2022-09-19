@@ -447,7 +447,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../../assets/images/symbol-Long-leg.png") center no-repeat, url("../../assets/images/splash-bcg.png") center 85% no-repeat;
+  background: url("../../assets/images/Symbol-Long-leg.png") center no-repeat, url("../../assets/images/splash-bcg.png") center 85% no-repeat;
   position: relative;
 }
 .hero-content__arrow {
@@ -1480,10 +1480,10 @@ h3 {
 .header__top .header__info .facebook-top {
   width: 24px;
   height: 24px;
-  background: url("../../../assets/social-icons/facebook-greysvg.svg");
+  background: url("../../assets/social-icons/facebook-greysvg.svg");
 }
 .header__top .header__info .facebook-top:hover {
-  background: url("../../../assets/social-icons/facebook-hover.svg");
+  background: url("../../assets/social-icons/facebook-hover.svg");
 }
 .header__menu {
   display: flex;
