@@ -65,6 +65,9 @@
             "item10 item11 item12"
             ". item11 item12"
             ". . item12";
+     
+      
+    
     .publication-item{
         &:nth-child(1){
             grid-area: item1;
