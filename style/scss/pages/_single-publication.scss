@@ -14,8 +14,10 @@
         align-items: center;
     }
 }
+.publication-description{
+    padding: 40px 0;
+}
 .publication-content{
-
     padding: 20px 0;
     border-top: 4px solid c.$separator-grey;
     border-bottom: 4px solid c.$separator-grey;
@@ -25,6 +27,9 @@
     li::marker{
         @include m.text(18px, bold, 26px, c.$accent-red);
     }
+    li{
+        margin-top: 10px;
+    }
     figure{
         display: flex;
         flex-direction: column;
@@ -33,6 +38,12 @@
         figcaption{
             @include m.text(16px, 400, 22px, c.$text-grey);
         }
+    }
+    p{
+        margin-bottom: 20px;
+    }
+    .publication-subtitle{
+        margin-top: 20px;
     }
 }
 .publication-share{
@@ -55,11 +66,35 @@
 @media (max-width: 992px){
     .single-publication{
         margin-top: 220px;
+        &-wrapper{
+            padding: 0 20px;
+        }
+    }
+    .publication-image{
+        img{
+            width: 100%;
+        }
     }
 }
 
 @media (max-width: 767px){
     .single-publication{
         margin-top: 160px;
+    }
+    .publication-image{
+        img{
+            width: 100%;
+        }
+    }
+    .publication-content{
+        width: 100%;
+        figure{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .publication-share{
+        align-self: center;
     }
 }

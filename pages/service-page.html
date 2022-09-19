@@ -79,8 +79,31 @@
             <p>До того ж, з часом робота стане однотипною і нецікавою для штатного юриста. А ще ми добре знаємо, як важко в Україні знайти хорошого кандидата з досвідом у сфері інформаційних технологій.</p>
             </div>
             <div class="service-description-action">
-                <a class="action-button">Безкоштовна консультація</a>
+                <a class="action-button" data-bs-toggle="modal" data-bs-target="#exampleModal">Безкоштовна консультація</a>
             </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <form class="form" action="#" method="post">
+                            <div class="modal-header">
+                            <h2 class="modal-title modal-title red-title" id="exampleModalLabel">Ми хотіли б Вам допомогти</h2>
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"/>
+                                <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"/>
+                                </svg>
+                            </button>
+                            </div>
+                                <input class="input-name" type="text" placeholder="Iм’я" required>
+                                <textarea class="input-message" name="message" cols="30" rows="10">Повідомлення</textarea>
+                                <h3 class="form-heading">Як вам відповісти?</h3>
+                                <input class="input-number" type="tel" placeholder="Номер телефона" required>
+                                <input class="input-email" type="email" placeholder="Чи email">
+                                <input class="action-button" type="submit" value="Надіслати запит">
+                        </form>
+                    </div>
+                  </div>
+                </div>
         </div>
         </section>
         <section class="service-direction">

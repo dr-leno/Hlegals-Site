@@ -125,3 +125,33 @@
         }
     }
 }
+
+.modal{
+    background: rgba(50, 50, 100, 0.8);
+    &-header{
+        padding: 0;
+        border: 0;
+        button{
+            border: 0;
+            background-color: transparent;
+        }
+    }
+    .form{
+        border-radius: 12px;
+    }
+    &-body{
+        padding: 0;
+        
+    }
+}
+@media (max-width: 767px){
+    .modal{
+        background-color: c.$bg-grey;
+        .form{
+            height: 100vh;
+            .action-button{
+                margin-top: 50px;
+            }
+        }
+    }
+}

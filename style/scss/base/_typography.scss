@@ -242,3 +242,27 @@ h3{
         }
     }
 }
+// SINGLE PUBLICATION
+
+.publication-title{
+        @include m.text(32px, 500, 38px, c.$main);
+    }
+.publication-date{
+        @include m.text(12px, bold, 14px, c.$text-grey);
+    }
+.publication-content{
+    p{
+        @include m.text(18px, 400, 26px, #000);
+    }
+    .publication-subtitle{
+        @include m.text(24px, 500, 28px, c.$main);
+    }
+    li{
+        @include m.text(18px, 400, 26px, #000);
+    }
+}
+@media (max-width: 767px){
+    .publication-title{
+        @include m.text(22px, 500, 26px, c.$main);
+    }
+}

@@ -5,6 +5,9 @@
     margin-top: 175px;
     padding: 40px 0 60px;
     background-color: c.$bg-grey;
+    .action-button{
+        margin: 0 auto;
+    }
 }
 .publications-switcher{
     display: flex;
@@ -44,8 +47,8 @@
     }
 }
 .publication-items-wrapper{
-    margin-top: 40px;
-   display: grid;
+        margin-top: 40px;
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 0.4fr 0.4fr 0.1fr 0.2fr 0.2fr 0.4fr 0fr 0.1fr 0.3fr 0.4fr 0.1fr;
         gap: 40px 40px;
@@ -102,5 +105,22 @@
         &:nth-child(12){
             grid-area: item12;
         }
+    }
+}
+@media (max-width: 992px){
+    .publication-page{
+        margin-top: 220px;
+    }
+}
+@media (max-width: 767px){
+    .publication-page{
+        margin-top: 140px;
+    }
+    .publication-items-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .publication-item{
+        margin-bottom: 0;
     }
 }
