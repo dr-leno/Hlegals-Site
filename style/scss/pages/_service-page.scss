@@ -126,8 +126,10 @@
     }
 }
 
-.modal{
+.modal.service-page{
     background: rgba(50, 50, 100, 0.8);
+}
+.modal{
     &-header{
         padding: 0;
         border: 0;

@@ -108,23 +108,30 @@
     display: flex;
     justify-content: flex-end;
     grid-area: navigation;
+    .menu-button{
+      display: none;
+    }
     .navbar-nav.menu{
         display: flex;
         padding: 0;
         gap: 15px;
-      .menu-link {
-        @include m.text(18px, 500, 21px, c.$accent-active);
-        &:hover {
-          color: c.$accent-red !important;
-        }
-        &.active {
-          color: c.$accent-red;
-          border-bottom: 2px solid c.$accent-red;
-        }
+      
       }
     }
   }
-}
+  .menu-item{
+    list-style-type: none;
+  }
+  .menu-link {
+    @include m.text(18px, 500, 21px, c.$accent-active);
+    &:hover {
+      color: c.$accent-red !important;
+    }
+    &.active {
+      color: c.$accent-red;
+      border-bottom: 2px solid c.$accent-red;
+    }
+  }
 
 @media (max-width: 992px){
     .header{
@@ -133,24 +140,35 @@
             grid-template-columns: auto;
         }
         &__info{
-            justify-content: space-between !important;
-        }
-        &__adress{
-            display: none;
-        }
-        &__phone::before, &__phone::after{
-            display: none;
-        }
-        &__facebook {
-            display: none;
-        }
-        .navbar-collapse{
-          justify-content: flex-start !important;
+            justify-content: flex-start !important;
         }
         
+     &__menu{
+      justify-content: flex-start;
+     }   
     }
     }
     @media (max-width: 767px){
+      .modal{
+        height: 100vh;
+        width: 100vw;
+      }
+      .modal-title{
+        margin-left: 200px;
+      }
+      .menu-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: c.$bg-grey;
+        padding: 10px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+      }
+      .modal-backdrop.show{
+        opacity: 0;
+        z-index: 100;
+      }  
       .header{
         &__top{
             grid-template-areas: "info info" "logo navigation";
@@ -183,6 +201,28 @@
               }
             }
         }
-        
+        &__info{
+          justify-content: space-between !important;
+      }
+        &__adress{
+            display: none;
+        }
+        &__phone::before, &__phone::after{
+            display: none;
+        }
+        &__facebook {
+            display: none;
+        }
+        .header__menu .navbar-nav.menu {
+          display: none;
+        }
+        &__menu{
+          .menu-button{
+            border: none;
+            background-color: transparent;
+            display: block;
+          }
+          justify-content: flex-end;
+        } 
       }
     }
