@@ -1,0 +1,65 @@
+@use '../base/colors' as c;
+@use '../abstracts/mixins' as m;
+
+.single-publication{
+    margin-top: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        max-width: 910px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.publication-content{
+
+    padding: 20px 0;
+    border-top: 4px solid c.$separator-grey;
+    border-bottom: 4px solid c.$separator-grey;
+    ol{
+        list-style-type: decimal !important;
+    }
+    li::marker{
+        @include m.text(18px, bold, 26px, c.$accent-red);
+    }
+    figure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        figcaption{
+            @include m.text(16px, 400, 22px, c.$text-grey);
+        }
+    }
+}
+.publication-share{
+    padding: 20px 0 60px;
+    display: flex;
+    align-self: flex-start;
+   
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        background-color: c.$bg-grey;
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 992px){
+    .single-publication{
+        margin-top: 220px;
+    }
+}
+
+@media (max-width: 767px){
+    .single-publication{
+        margin-top: 160px;
+    }
+}

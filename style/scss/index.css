@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  list-style-type: none;
   text-decoration: none !important;
 }
 
@@ -164,19 +163,19 @@ h3 {
   text-align: center;
 }
 
-.publications .publication-item-title {
+.publication-item-title {
   font-size: 18px;
   font-weight: 500;
   line-height: 21px;
-  color: #006CCF;
+  color: #24A3FF;
 }
-.publications .publication-item-date {
+.publication-item-date {
   font-size: 12px;
   font-weight: bold;
   line-height: 14px;
   color: #B3B3BA;
 }
-.publications .publication-item-text {
+.publication-item-text {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -829,6 +828,7 @@ h3 {
   }
 }
 .contact-form {
+  margin-top: 120px;
   padding: 80px 0;
 }
 .contact-form-wrapper {
@@ -864,6 +864,11 @@ h3 {
        column-gap: 10px;
 }
 
+@media (max-width: 992px) {
+  .contact-form {
+    margin-top: 140px;
+  }
+}
 @media (max-width: 767px) {
   .contact-form {
     padding: 20px 0;
@@ -963,6 +968,9 @@ h3 {
   display: flex;
   justify-content: center;
 }
+.service-direction-content ul {
+  list-style-type: none;
+}
 .service-direction-content ul li::before {
   content: "•";
   color: #F0145A;
@@ -986,6 +994,171 @@ h3 {
 @media (max-width: 767px) {
   .service-direction-content {
     flex-direction: column;
+  }
+}
+.publication-page {
+  margin-top: 175px;
+  padding: 40px 0 60px;
+  background-color: #F5F5FA;
+}
+
+.publications-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#publ-switch {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+#publ-switch:checked ~ .publ-switch::before {
+  left: 130px;
+}
+
+.publ-switch {
+  width: 260px;
+  height: 50px;
+  padding: 5px;
+  position: relative;
+  display: flex;
+  background: #E6E6F0;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-around;
+}
+.publ-switch::before {
+  content: "";
+  display: flex;
+  background: #fff;
+  width: 125px;
+  height: 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 5px;
+  transition: 0.5s;
+}
+.publ-switch p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #323264;
+  z-index: 100;
+}
+
+.publication-items-wrapper {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 0.4fr 0.1fr 0.2fr 0.2fr 0.4fr 0fr 0.1fr 0.3fr 0.4fr 0.1fr;
+  gap: 40px 40px;
+  grid-auto-flow: row;
+  grid-template-areas: "item1 item2 item3" "item4 item2 item3" "item4 item5 item3" "item4 item5 item6" "item4 item5 item6" "item7 item5 item6" "item7 item8 item6" "item7 item8 item9" "item10 item8 item9" "item10 . item9" "item10 item11 ." "item10 item11 item12" ". item11 item12" ". . item12";
+}
+.publication-items-wrapper .publication-item:nth-child(1) {
+  grid-area: item1;
+}
+.publication-items-wrapper .publication-item:nth-child(2) {
+  grid-area: item2;
+}
+.publication-items-wrapper .publication-item:nth-child(3) {
+  grid-area: item3;
+}
+.publication-items-wrapper .publication-item:nth-child(4) {
+  grid-area: item4;
+}
+.publication-items-wrapper .publication-item:nth-child(5) {
+  grid-area: item5;
+}
+.publication-items-wrapper .publication-item:nth-child(6) {
+  grid-area: item6;
+}
+.publication-items-wrapper .publication-item:nth-child(7) {
+  grid-area: item7;
+}
+.publication-items-wrapper .publication-item:nth-child(8) {
+  grid-area: item8;
+}
+.publication-items-wrapper .publication-item:nth-child(9) {
+  grid-area: item9;
+}
+.publication-items-wrapper .publication-item:nth-child(10) {
+  grid-area: item10;
+}
+.publication-items-wrapper .publication-item:nth-child(11) {
+  grid-area: item11;
+}
+.publication-items-wrapper .publication-item:nth-child(12) {
+  grid-area: item12;
+}
+
+.single-publication {
+  margin-top: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.single-publication-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 910px;
+  justify-content: center;
+  align-items: center;
+}
+
+.publication-content {
+  padding: 20px 0;
+  border-top: 4px solid #E6E6F0;
+  border-bottom: 4px solid #E6E6F0;
+}
+.publication-content ol {
+  list-style-type: decimal !important;
+}
+.publication-content li::marker {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #F0145A;
+}
+.publication-content figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.publication-content figure figcaption {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+
+.publication-share {
+  padding: 20px 0 60px;
+  display: flex;
+  align-self: flex-start;
+}
+.publication-share a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: #F5F5FA;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+}
+
+@media (max-width: 992px) {
+  .single-publication {
+    margin-top: 220px;
+  }
+}
+@media (max-width: 767px) {
+  .single-publication {
+    margin-top: 160px;
   }
 }
 .footer {
@@ -1588,24 +1761,8 @@ h3 {
 }
 .publications-column {
   display: flex;
+  row-gap: 40px;
   flex-direction: column;
-}
-.publications .publication-item {
-  margin-bottom: 40px;
-}
-.publications .publication-item-image img {
-  display: block;
-  width: 100%;
-  border: 8px 8px 0 0;
-}
-.publications .publication-item-content {
-  background-color: #fff;
-  padding: 20px;
-}
-.publications .publication-item-text {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 4px solid #E6E6F0;
 }
 .publications-action {
   position: absolute;
@@ -1616,6 +1773,21 @@ h3 {
   left: 0;
   display: flex;
   justify-content: center;
+}
+
+.publication-item-image img {
+  display: block;
+  width: 100%;
+  border: 8px 8px 0 0;
+}
+.publication-item-content {
+  background-color: #fff;
+  padding: 20px;
+}
+.publication-item-text {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 4px solid #E6E6F0;
 }
 
 @media (max-width: 767px) {
@@ -1632,17 +1804,17 @@ h3 {
     display: flex;
     flex-direction: column;
   }
-  .publications .publication-item {
-    margin-bottom: 20px;
-  }
-  .publications .publication-item.s-none {
-    display: none;
-  }
-  .publications .publication-item-text {
-    display: none;
-  }
   .publications-action {
     bottom: 0;
+  }
+  .publication-item {
+    margin-bottom: 20px;
+  }
+  .publication-item.s-none {
+    display: none;
+  }
+  .publication-item-text {
+    display: none;
   }
 }
 .form {

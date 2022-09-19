@@ -78,10 +78,9 @@ h3{
         text-align: center;
     }
 }
-.publications{
     .publication-item{
         &-title{
-            @include m.text(18px, 500, 21px, c.$accent-active-active);
+            @include m.text(18px, 500, 21px, c.$accent-active);
         }
         &-date{
             @include m.text(12px, bold, 14px, c.$text-grey);
@@ -90,7 +89,7 @@ h3{
             @include m.text(16px, 400, 22px, #000);
         }
     }
-}
+    
 .footer{
     &-adress{
         &-text{
